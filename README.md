@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Belum bisa dibuka karena backend nya belum di deploy
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
