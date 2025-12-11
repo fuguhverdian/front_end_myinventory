@@ -77,7 +77,7 @@ setProducts(response.data);
                     </thead>
                     <tbody>
                         {
-                            products.length >= 0 && (products.map((row, key)=>(
+                            products.length > 0 && (products.map((row, key)=>(
                             <tr key={key}>
                             <td>{key+1}</td>
                             <td>{row.name}</td>
