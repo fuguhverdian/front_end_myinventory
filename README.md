@@ -1,4 +1,4 @@
-# Belum bisa dibuka karena backend nya belum di deploy
+# Sudah full deploy finally
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
