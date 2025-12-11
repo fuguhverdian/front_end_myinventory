@@ -91,7 +91,7 @@ setProducts(response.data);
                             </Link>
                             </td>
                             </tr>
-                            )))}
+                            ))}
                     </tbody>
                     </table>
             </div>
