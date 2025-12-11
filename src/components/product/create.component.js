@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
 import {FormControl, FormLabel } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default function CreateProduct() {
     const navigate = useNavigate();
