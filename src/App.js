@@ -8,7 +8,7 @@ import { BrowserRouter as Router , Routes, Route, Link } from "react-router-dom"
 import EditProduct from "./components/product/edit.component";
 import ProductList from "./components/product/list.component";
 import CreateProduct from "./components/product/create.component";
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 
 import logo from './logo.svg';
 
