@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import {FormControl, FormLabel } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'
 import { useNavigate, useParams } from 'react-router-dom'
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function EditProduct() {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function EditProduct() {
         },[]);
 
     const getProduct = async () => {
-        await axios.get(`http://localhost:8000/api/product/${id}`,{
+        await axios.get(`${API_URL}/api/product/${id}`,{
         headers: {
             'X-API-KEY': 'keygen123'
         }
@@ -44,7 +45,7 @@ const updateProduct = async (e) => {
         const formData = new FormData()
         formData.append('name', name)
         formData.append('description', description)
-        await axios.post(`http://localhost:8000/api/product/update/${id}`, formData,  {
+        await axios.post(`${API_URL}/api/product/update/${id}`, formData,  {
     headers: {
         'X-API-KEY': 'keygen123'
     }

@@ -8,28 +8,13 @@ import { BrowserRouter as Router , Routes, Route, Link } from "react-router-dom"
 import EditProduct from "./components/product/edit.component";
 import ProductList from "./components/product/list.component";
 import CreateProduct from "./components/product/create.component";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 import logo from './logo.svg';
 
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <Router>
       <Navbar bg="primary">
         <Container>

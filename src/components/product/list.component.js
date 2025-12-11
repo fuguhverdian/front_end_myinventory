@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 import axios from 'axios';
 import Swal from 'sweetalert2'
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function ProductList() {
     const [products, setProducts] = useState([]);
-
     useEffect(()=>{
     fetchProducts()
     },[]);
 
 const fetchProducts = async () => {
-await axios.get(`http://localhost:8000/api/product`,
+await axios.get(`${API_URL}/api/product`,
     {
     headers: {
         'X-API-KEY': 'keygen123'
@@ -25,8 +25,6 @@ setProducts(response.data);
             icon: "error"
             })
 })}
-
-
 
     const deleteProduct = async (id) => {
         const isConfirm = await Swal.fire({
@@ -41,7 +39,7 @@ setProducts(response.data);
             if(!isConfirm){
             return;
         }
-        await axios.delete(`http://localhost:8000/api/product/${id}/delete`, {
+        await axios.delete(`${API_URL}/api/product/${id}/delete`, {
     headers: {
         'X-API-KEY': 'keygen123'
     }

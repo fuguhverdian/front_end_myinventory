@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
 import {FormControl, FormLabel } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function CreateProduct() {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function CreateProduct() {
         formData.append('name', name)
         formData.append('description', description)
 
-        await axios.post(`http://localhost:8000/api/product/save`, formData,  {
+        await axios.post(`${API_URL}/api/product/save`, formData,  {
     headers: {
         'X-API-KEY': 'keygen123'
     }
